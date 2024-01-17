@@ -1,3 +1,15 @@
+// Formats a media item with an icon prefix.
+#let media(icon: str, content) = {
+  let item = it => box(height: 1em, align(horizon, it)) // inline alignment
+  box(pad(x: .25em, {
+    // Show the icon...
+    item(image(height: .8em, "assets/img/" + icon + ".svg"))
+    h(.25em)
+    // ... then content
+    item(content)
+  }))
+}
+
 // The project function defines how your document looks.
 // It takes your content and some metadata and formats it.
 // Go ahead and customize it to your liking!
@@ -39,19 +51,27 @@
 
   // Geography section
   align(center)[
-    #author.affiliation
-    #sym.dot.c
-    #author.location
+    #media(icon: "building", author.affiliation)
+    #box(height: 1em, align(horizon, sym.dot.c))
+    #media(icon: "location", author.location)
   ]
 
   // Contact information
   let contact = (
-    link("tel:" + author.phone.replace(regex("[ ().-]"), ""), author.phone),
-    link("mailto:" + author.email, author.email),
+    link(
+      "tel:" + author.phone.replace(regex("[ ().-]"), ""),
+      media(icon: "phone", author.phone),
+    ),
+    link(
+      "mailto:" + author.email,
+      media(icon: "envelope", author.email),
+    ),
     ..social.values()
   )
   align(center)[
-    #contact.join[ #sym.bar ]
+    #contact.join(
+      box(height: 1em, align(horizon, sym.bar))
+    )
   ]
 
   // Main body.
