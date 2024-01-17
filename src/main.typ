@@ -11,9 +11,18 @@
     phone: "+1.416.602.2925",
   ),
   social: (
-    web: link("https://zakhary.dev", "zakhary.dev"),
-    lin: link("https://linkedin.com/in/zakhary", "in/zakhary"),
-    src: link("https://github.com/kaplanz", "kaplanz"),
+    web: link(
+      "https://zakhary.dev",
+      media(icon: "link")[zakhary.dev]
+    ),
+    lin: link(
+      "https://linkedin.com/in/zakhary",
+      media(icon: "linkedin")[in/zakhary]
+    ),
+    src: link(
+      "https://github.com/kaplanz",
+      media(icon: "github")[kaplanz]
+    ),
   ),
 )
 
