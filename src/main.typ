@@ -218,7 +218,7 @@
   ],
   course(
     code: "APS360",
-    name: "Algorithms & Data Structures",
+    name: "Artificial Intelligence Fundamentals",
     mark: "A+",
   )[
     Optimizing neural networks, autoencoders, RNNs, NLP, GANs.
