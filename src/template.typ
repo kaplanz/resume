@@ -3,7 +3,7 @@
   let item = it => box(height: 1em, align(horizon, it)) // inline alignment
   box(pad(x: .25em, {
     // Show the icon...
-    item(image(height: .8em, "assets/img/" + icon + ".svg"))
+    item(image(height: .8em, "img/media/" + icon + ".svg"))
     h(.25em)
     // ... then content
     item(content)
