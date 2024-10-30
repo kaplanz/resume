@@ -75,3 +75,16 @@ watch *opts: dirs
         {{opts}}                \
         {{src}}/{{target}}.typ  \
         {{out}}/{{target}}.pdf
+
+
+# ---------------
+# -- Recursive --
+# ---------------
+
+# compile for an application
+app email="1" phone="1":
+    @just --set email {{email}} --set phone {{phone}} build
+
+# compile for web hosting
+web email="1" phone="": && build
+    @just --set email {{email}} --set phone {{phone}} build
