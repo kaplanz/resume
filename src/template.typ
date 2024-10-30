@@ -20,7 +20,7 @@
     paper: "us-letter",
     margin: (left: 15mm, right: 15mm, top: 15mm, bottom: 15mm),
   )
-  set text(font: "Linux Libertine", lang: "en")
+  set text(font: "Libertinus Serif", lang: "en")
 
   // Override commonly used style formats.
   show link: underline
