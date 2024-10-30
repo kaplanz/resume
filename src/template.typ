@@ -58,18 +58,22 @@
 
   // Contact information
   let contact = (
-    link(
-      "tel:" + author.phone.replace(regex("[ ().-]"), ""),
-      media(icon: "phone", author.phone),
-    ),
-    link(
-      "mailto:" + author.email,
-      media(icon: "envelope", author.email),
-    ),
+    if "phone" in author {
+      link(
+        "tel:" + author.phone.replace(regex("[ ().-]"), ""),
+        media(icon: "phone", author.phone),
+      )
+    },
+    if "email" in author {
+        link(
+        "mailto:" + author.email,
+        media(icon: "envelope", author.email),
+      )
+    },
     ..social.values()
   )
   align(center)[
-    #contact.join(
+    #contact.filter(it => it != none).join(
       box(height: 1em, align(horizon, sym.bar))
     )
   ]
