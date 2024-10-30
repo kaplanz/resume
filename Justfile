@@ -22,6 +22,10 @@ alias w  := watch
 out := "./build"
 src := "./src"
 
+# Features
+email := "1"
+phone := ""
+
 # Targets
 target := "main"
 
@@ -37,8 +41,13 @@ _: all
 all: (build)
 
 # compile a document
-build doc=target: dirs
-    @typst compile {{src}}/{{doc}}.typ {{out}}/{{doc}}.pdf
+build *opts: dirs
+    @typst compile              \
+        --input email={{email}} \
+        --input phone={{phone}} \
+        {{opts}}                \
+        {{src}}/{{target}}.typ  \
+        {{out}}/{{target}}.pdf
 
 # clean build artifacts
 clean:
@@ -55,9 +64,14 @@ help:
 
 # build and open target
 [macos]
-open doc=target: (build doc)
-    @open {{out}}/{{doc}}.pdf
+open: build
+    @open {{out}}/{{target}}.pdf
 
 # watch for changes in a document
-watch doc=target: dirs
-    @typst watch {{src}}/{{doc}}.typ {{out}}/{{doc}}.pdf
+watch *opts: dirs
+    @typst watch                \
+        --input email={{email}} \
+        --input phone={{phone}} \
+        {{opts}}                \
+        {{src}}/{{target}}.typ  \
+        {{out}}/{{target}}.pdf

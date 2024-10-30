@@ -57,14 +57,17 @@
   ]
 
   // Contact information
+  let enabled = key => (author, sys.inputs).all(
+    dict => dict.at(key, default: "").len() > 0
+  )
   let contact = (
-    if "phone" in author {
+    if enabled("phone") {
       link(
         "tel:" + author.phone.replace(regex("[ ().-]"), ""),
         media(icon: "phone", author.phone),
       )
     },
-    if "email" in author {
+    if enabled("email") {
         link(
         "mailto:" + author.email,
         media(icon: "envelope", author.email),
