@@ -36,8 +36,10 @@
     to:   datetime(year: 2023, month: 06, day: 20),
   ),
 )[
-  - Studied #emph[Computer Engineering] at the Faculty of Applied Science & Engineering.
-  - Achieved #emph[Dean's List Scholar] for all semesters; confurred #emph[High Honours] upon graduation.
+  - Studied #emph[Computer Engineering] at the Faculty of Applied Science &
+    Engineering.
+  - Achieved #emph[Dean's List Scholar] for all semesters; confurred #emph[High
+    Honours] upon graduation.
 ]
 
 = Work
@@ -61,7 +63,9 @@
     to:   datetime(year: 2023, month: 05, day: 30),
   ),
 )[
-  - Hired as an undergraduate teaching assistant for C++ project-based lab component of ECE244 (Programming Fundamentals), and for Verilog processor design and ARM assembly labs for ECE243 (Computer Organization).
+  - Hired as an undergraduate teaching assistant for C++ project-based lab
+    component of ECE244 (Programming Fundamentals), and for Verilog processor
+    design and ARM assembly labs for ECE243 (Computer Organization).
 ]
 
 #experience(
@@ -72,9 +76,12 @@
     to:   datetime(year: 2022, month: 08, day: 26),
   ),
 )[
-  - Created transaction level model for cache architecture for use in several IPs within the Snapdragon’s digital signal processor (DSP).
-  - Diagrammed architectures and prepared internal presentations justifying designs.
-  - Lead exploration of high-level synthesis (HLS) workflows within architecture team.
+  - Created transaction level model for cache architecture for use in several
+    IPs within the Snapdragon’s digital signal processor (DSP).
+  - Diagrammed architectures and prepared internal presentations justifying
+    designs.
+  - Lead exploration of high-level synthesis (HLS) workflows within architecture
+    team.
 ]
 
 #experience(
@@ -85,8 +92,11 @@
     to:   datetime(year: 2020, month: 08, day: 31),
   ),
 )[
-  - Developed and tested features for Irazu, a geomechanical simulation software.
-  - Duties included implementation of CAD editor tools, visualization of simulation outputs, project file management, and licensing. Worked using Qt in C++.
+  - Developed and tested features for Irazu, a geomechanical simulation
+    software.
+  - Duties included implementation of CAD editor tools, visualization of
+    simulation outputs, project file management, and licensing. Worked using Qt
+    in C++.
 ]
 
 #experience(
@@ -97,8 +107,11 @@
     to:   datetime(year: 2020, month: 08, day: 31),
   ),
 )[
-  - Explored use of machine learning (ML) to extract topics from tweets via natural language processing with TensorFlow on BERT and XLNet models.
-  - Researched improvements to distributed ML using federated learning (FL) on PyTorch. Developed framework for conducting experiments. Coauthor of paper presented at IEEE INFOCOM discussing findings of FL project.
+  - Explored use of machine learning (ML) to extract topics from tweets via
+    natural language processing with TensorFlow on BERT and XLNet models.
+  - Researched improvements to distributed ML using federated learning (FL) on
+    PyTorch. Developed framework for conducting experiments. Coauthor of paper
+    presented at IEEE INFOCOM discussing findings of FL project.
 ]
 
 = Projects
@@ -112,7 +125,8 @@
   ),
   fmt: "[year]",
 )[
-  - Implemented a complete hardware emulator of the DMG-01 Nintendo Game Boy, including a cycle accurate SM83 (Z80-derivative) CPU model.
+  - Implemented a complete hardware emulator of the DMG-01 Nintendo Game Boy,
+    including a cycle accurate SM83 (Z80-derivative) CPU model.
 ]
 
 #experience(
@@ -124,7 +138,10 @@
   ),
   fmt: "[year]",
 )[
-  - Created and currently maintaining an open source Neovim plugin for managing trailing whitespace. Featured in #emph(link("https://dotfyle.com/this-week-in-neovim/2#new-nvim-retrail")[This Week In Neovim]) newsletter.
+  - Created and currently maintaining an open source Neovim plugin for managing
+    trailing whitespace. Featured in
+    #emph(link("https://dotfyle.com/this-week-in-neovim/2#new-nvim-retrail")[This
+    Week In Neovim]) newsletter.
 ]
 
 #experience(
@@ -136,7 +153,9 @@
   ),
   fmt: "[year]",
 )[
-  - Designed a 16-bit instruction set architecture (ISA) for a custom CPU. Used Huffman codings when deciding encodings to innovatively improve instruction density.
+  - Designed a 16-bit instruction set architecture (ISA) for a custom CPU. Used
+    Huffman codings when deciding encodings to innovatively improve instruction
+    density.
 ]
 
 #experience(
@@ -148,7 +167,9 @@
   ),
   fmt: "[year]",
 )[
-  -  Solved NP-complete graph problems (travelling salesman variant) using advanced meta-heuristic and simulated annealing iterative improvement algorithms.
+  -  Solved NP-complete graph problems (travelling salesman variant) using
+     advanced meta-heuristic and simulated annealing iterative improvement
+     algorithms.
 ]
 
 #experience(
@@ -160,13 +181,16 @@
   ),
   fmt: "[year]",
 )[
-  -  Implemented an 16-bit toy CPU in Verilog with clearly defined control and data paths. Compiled and tested on DE1-SoC FPGA development board.
+  -  Implemented an 16-bit toy CPU in Verilog with clearly defined control and
+     data paths. Compiled and tested on DE1-SoC FPGA development board.
 ]
 
 = Publications
 
 #paper(
-  title: "Optimizing Federated Learning on Non-IID Data with Reinforcement Learning",
+  title: [
+    Optimizing Federated Learning on Non-IID Data with Reinforcement Learning
+  ],
   authors: [Hao Wang, #underline[Zakhary Kaplan], Di Niu, Baochun Li],
   conference: "IEEE INFOCOM 2020",
 )
@@ -179,21 +203,24 @@
     name: "Digital Systems",
     mark: "A+",
   )[
-    Digital logic circuit design with substantial hands-on laboratory work using Verilog on FPGA boards.
+    Digital logic circuit design with substantial hands-on laboratory work using
+    Verilog on FPGA boards.
   ],
   course(
     code: "ECE334",
     name: "Digital Electronics",
     mark: "A+",
   )[
-    Digital design techniques for integrated circuits, CMOS logic design, Elmore delays.
+    Digital design techniques for integrated circuits, CMOS logic design, Elmore
+    delays.
   ],
   course(
     code: "ECE243",
     name: "Computer Organization",
     mark: "A+",
   )[
-    CPU design in Verilog and ARM instruction set architecture. Focus on memory, caches, and scheduling IO with interrupts.
+    CPU design in Verilog and ARM instruction set architecture. Focus on memory,
+    caches, and scheduling IO with interrupts.
   ],
   course(
     code: "ECE344",
@@ -207,7 +234,8 @@
     name: "Algorithms & Data Structures",
     mark: "A+",
   )[
-    Trees, graphs, amortized analysis, hashing, dynamic programming, greedy, NPC.
+    Trees, graphs, amortized analysis, hashing, dynamic programming, greedy,
+    NPC.
   ],
   course(
     code: "ECE244",
