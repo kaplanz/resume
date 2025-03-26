@@ -5,16 +5,6 @@
 # Vim:         set fdl=0 fdm=marker ft=make:
 
 # ---------------
-# --  Aliases  --
-# ---------------
-
-alias b  := build
-alias cl := clean
-alias o  := open
-alias w  := watch
-
-
-# ---------------
 # -- Variables --
 # ---------------
 
