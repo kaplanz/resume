@@ -6,7 +6,7 @@
   author: (
     name: "Zakhary Kaplan",
     email: "me@zakhary.dev",
-    affiliation: "Intel Corporation",
+    affiliation: "Altera",
     location: "Kingston, ON",
     phone: "+1.416.602.2925",
   ),
@@ -44,13 +44,13 @@
 
 #experience(
   what:  "FPGA Architect",
-  where: "Intel Corporation",
+  where: "Altera (formerly Intel)",
   when:  (
     from: datetime(year: 2023, month: 07, day: 04),
     to:   none,
   ),
 )[
-  - Working on Intel's next-generation FPGA's architectures.
+  - Working on Altera's next-generation FPGA's architectures.
 ]
 
 #experience(
