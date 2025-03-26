@@ -46,7 +46,7 @@
   what:  "FPGA Architect",
   where: "Intel Corporation",
   when:  (
-    from: datetime(year: 2018, month: 09, day: 01),
+    from: datetime(year: 2023, month: 07, day: 04),
     to:   none,
   ),
 )[
