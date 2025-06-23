@@ -38,7 +38,7 @@
 )[
   - Studied #emph[Computer Engineering] at the Faculty of Applied Science &
     Engineering.
-  - Achieved #emph[Dean's List Scholar] for all semesters; confurred #emph[High
+  - Achieved #emph[Dean's List Scholar] for all semesters; conferred #emph[High
     Honours] upon graduation.
 ]
 
