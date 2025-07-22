@@ -6,7 +6,7 @@
   author: (
     name: "Zakhary Kaplan",
     email: "me@zakhary.dev",
-    affiliation: "Altera",
+    company: "Altera",
     location: "Kingston, ON",
     phone: "+1.416.602.2925",
   ),
@@ -29,57 +29,64 @@
 = Education
 
 #experience(
-  what:  "Bachelor of Applied Science",
+  what:  "BASc in Computer Engineering",
   where: "University of Toronto",
   when:  (
-    from: datetime(year: 2018, month: 09, day: 01),
-    to:   datetime(year: 2023, month: 06, day: 20),
+    start: datetime(year: 2018, month: 09, day: 01),
+    until: datetime(year: 2023, month: 06, day: 20),
   ),
 )[
-  - Studied #emph[Computer Engineering] at the Faculty of Applied Science &
-    Engineering.
-  - Achieved #emph[Dean's List Scholar] for all semesters; conferred #emph[High
-    Honours] upon graduation.
+  - Obtained 3.89/4.0 GPA. Course average 88%.
+  - Conferred _High Honours_ upon graduation; _Dean's List Scholar_ for all
+    semesters.
+  - Completed certificates in _Artificial Intelligence_ and _Engineering
+    Business_.
 ]
 
 = Work
 
 #experience(
   what:  "FPGA Architect",
-  where: "Altera (formerly Intel)",
+  where: [Altera _(formerly Intel)_],
   when:  (
-    from: datetime(year: 2023, month: 07, day: 04),
-    to:   none,
+    start: datetime(year: 2023, month: 07, day: 04),
+    until: none,
   ),
 )[
-  - Working on Altera's next-generation FPGA's architectures.
+  - Designed workflow and toolkit for analyzing fabric routing delays in SPICE
+    using raw netlist data at transistor level.
+  - Modelled FPGA fabric clock-tree self-balancing delay blocks; workflow tracks
+    nightly regressions in RTL.
+  - Explored feasibility of proposed changes to routing fabric informed by
+    modelling performance impact.
 ]
 
 #experience(
   what:  "Teaching Assistant",
   where: "University of Toronto",
   when:  (
-    from: datetime(year: 2022, month: 08, day: 01),
-    to:   datetime(year: 2023, month: 05, day: 30),
+    start: datetime(year: 2022, month: 08, day: 01),
+    until: datetime(year: 2023, month: 05, day: 30),
   ),
 )[
-  - Hired as an undergraduate teaching assistant for C++ project-based lab
-    component of ECE244 (Programming Fundamentals), and for Verilog processor
-    design and ARM assembly labs for ECE243 (Computer Organization).
+  - ECE243 _Computer Organization_: ARM v7 assembly for Cortex A9, Verilog
+    soft-core CPUs, embedded programming.
+  - ECE244 _Programming Fundamentals_:  C++ language, object-oriented
+    programming, data structures, and complexity.
 ]
 
 #experience(
   what:  "Computer Architect",
   where: "Qualcomm",
   when:  (
-    from: datetime(year: 2021, month: 05, day: 10),
-    to:   datetime(year: 2022, month: 08, day: 26),
+    start: datetime(year: 2021, month: 05, day: 10),
+    until: datetime(year: 2022, month: 08, day: 26),
   ),
 )[
-  - Created transaction level model for cache architecture for use in several
-    IPs within the Snapdragon’s digital signal processor (DSP).
-  - Diagrammed architectures and prepared internal presentations justifying
-    designs.
+  - Created transaction level model for cache prefetcher used by IPs within
+    Snapdragon’s digital signal processor (DSP).
+  - Worked on architecture specification for multi-level cache system informed
+    by data-driven simulation results.
   - Lead exploration of high-level synthesis (HLS) workflows within architecture
     team.
 ]
@@ -88,101 +95,26 @@
   what:  "Software Developer",
   where: "Geomechanica Inc.",
   when:  (
-    from: datetime(year: 2020, month: 05, day: 01),
-    to:   datetime(year: 2020, month: 08, day: 31),
+    start: datetime(year: 2020, month: 05, day: 01),
+    until: datetime(year: 2020, month: 08, day: 31),
   ),
 )[
-  - Developed and tested features for Irazu, a geomechanical simulation
-    software.
-  - Duties included implementation of CAD editor tools, visualization of
-    simulation outputs, project file management, and licensing. Worked using Qt
-    in C++.
+  - Developed and tested geomechanical simulation features in C++/Qt, including:
+    CAD editor, rendering, and licences.
 ]
 
 #experience(
-  what:  "Researcher",
+  what:  "ML/AI Researcher",
   where: "University of Toronto",
   when:  (
-    from: datetime(year: 2020, month: 05, day: 01),
-    to:   datetime(year: 2020, month: 08, day: 31),
+    start: datetime(year: 2019, month: 05, day: 01),
+    until: datetime(year: 2019, month: 08, day: 31),
   ),
 )[
-  - Explored use of machine learning (ML) to extract topics from tweets via
-    natural language processing with TensorFlow on BERT and XLNet models.
-  - Researched improvements to distributed ML using federated learning (FL) on
-    PyTorch. Developed framework for conducting experiments. Coauthor of paper
-    presented at IEEE INFOCOM discussing findings of FL project.
-]
-
-= Projects
-
-#experience(
-  what:  "Nintendo Game Boy Emulator",
-  where: "Rust",
-  when:  (
-    from: datetime(year: 2022, month: 01, day: 22),
-    to:   none,
-  ),
-  fmt: "[year]",
-)[
-  - Implemented a complete hardware emulator of the DMG-01 Nintendo Game Boy,
-    including a cycle accurate SM83 (Z80-derivative) CPU model.
-]
-
-#experience(
-  what:  "Neovim Plugin",
-  where: "Lua",
-  when:  (
-    from: datetime(year: 2022, month: 07, day: 20),
-    to:   datetime(year: 2023, month: 01, day: 13),
-  ),
-  fmt: "[year]",
-)[
-  - Created and currently maintaining an open source Neovim plugin for managing
-    trailing whitespace. Featured in
-    #emph(link("https://dotfyle.com/this-week-in-neovim/2#new-nvim-retrail")[This
-    Week In Neovim]) newsletter.
-]
-
-#experience(
-  what:  "KAP-16 Instruction Set Architecture",
-  where: "Specification",
-  when:  (
-    from: datetime(year: 2021, month: 07, day: 19),
-    to:   datetime(year: 2022, month: 02, day: 13),
-  ),
-  fmt: "[year]",
-)[
-  - Designed a 16-bit instruction set architecture (ISA) for a custom CPU. Used
-    Huffman codings when deciding encodings to innovatively improve instruction
-    density.
-]
-
-#experience(
-  what:  "Mapper",
-  where: "C++, GTK",
-  when:  (
-    from: datetime(year: 2020, month: 01, day: 20),
-    to:   datetime(year: 2020, month: 05, day: 18),
-  ),
-  fmt: "[year]",
-)[
-  -  Solved NP-complete graph problems (travelling salesman variant) using
-     advanced meta-heuristic and simulated annealing iterative improvement
-     algorithms.
-]
-
-#experience(
-  what:  "16-bit CPU",
-  where: "Verilog, DE1-SoC",
-  when:  (
-    from: datetime(year: 2020, month: 01, day: 16),
-    to:   datetime(year: 2020, month: 01, day: 24),
-  ),
-  fmt: "[year]",
-)[
-  -  Implemented an 16-bit toy CPU in Verilog with clearly defined control and
-     data paths. Compiled and tested on DE1-SoC FPGA development board.
+  - Applied ML to extract topics from tweets using NLP sentiment analysis with
+    TensorFlow on BERT and XLNet.
+  - Researched distributed ML via federated learning in PyTorch; coauthored IEEE
+    INFOCOM paper on findings.
 ]
 
 = Publications
@@ -195,60 +127,145 @@
   conference: "IEEE INFOCOM 2020",
 )
 
+= Projects
+
+#project(
+  name:  "Game Boy Emulator",
+  page: "https://git.zakhary.dev/rugby",
+  date: datetime(year: 2022, month: 01, day: 22),
+)[
+  Cycle-accurate emulator of the DMG-01 Game Boy written in Rust, including SM83
+  (Z80-like) CPU, graphics, and sound. Includes native (macOS/Linux/Windows),
+  iOS, and #link("https://rugby.zakhary.dev")[web] frontends. Over 30kloc.
+]
+
+#project(
+  name:  "Dynamic DNS Client",
+  page: "https://git.zakhary.dev/dynasty",
+  date: datetime(year: 2019, month: 05, day: 13),
+)[
+  Daemon for periodically querying and updating DNS server records.
+]
+
+#project(
+  name:  "Dotfiles",
+  page: "https://git.zakhary.dev/dotfiles",
+  date: datetime(year: 2019, month: 05, day: 13),
+)[
+  Workspace configuration with portable Bash installer script; supports `nvim`,
+  `tmux`, `zsh`, and more.
+]
+
+#project(
+  name:  "16-bit ISA",
+  page:  "https://git.zakhary.dev/kap-16",
+  date: datetime(year: 2021, month: 07, day: 19),
+)[
+  Designed 16-bit ISA for theoretical CPU; used Huffman coding to improve
+  instruction density.
+]
+
+#project(
+  name:  "16-bit CPU",
+  date: datetime(year: 2020, month: 01, day: 16),
+)[
+  Verilog implementation with distinct control/data paths; compiled for DE1-SoC
+  FPGA board.
+]
+
+#project(
+  name:  "Mapper",
+  date: datetime(year: 2020, month: 01, day: 20),
+)[
+  NP-complete graph problem solver (travelling salesman) using meta-heuristics
+  and simulated annealing.
+]
+
 = Relevant Courses
 
-#grid(columns: 2, gutter: 1em,
-  course(
-    code: "ECE241",
-    name: "Digital Systems",
-    mark: "A+",
-  )[
-    Digital logic circuit design with substantial hands-on laboratory work using
-    Verilog on FPGA boards.
-  ],
-  course(
-    code: "ECE334",
-    name: "Digital Electronics",
-    mark: "A+",
-  )[
-    Digital design techniques for integrated circuits, CMOS logic design, Elmore
-    delays.
-  ],
-  course(
-    code: "ECE243",
-    name: "Computer Organization",
-    mark: "A+",
-  )[
-    CPU design in Verilog and ARM instruction set architecture. Focus on memory,
-    caches, and scheduling IO with interrupts.
-  ],
-  course(
-    code: "ECE344",
-    name: "Operating Systems",
-    mark: "A+",
-  )[
-    Concurrency, deadlock, CPU scheduling, memory management, file systems.
-  ],
-  course(
-    code: "ECE345",
-    name: "Algorithms & Data Structures",
-    mark: "A+",
-  )[
-    Trees, graphs, amortized analysis, hashing, dynamic programming, greedy,
-    NPC.
-  ],
-  course(
-    code: "ECE244",
-    name: "Programming Fundamentals",
-    mark: "A+",
-  )[
-    Object-oriented programming in C++.
-  ],
-  course(
-    code: "APS360",
-    name: "Artificial Intelligence Fundamentals",
-    mark: "A+",
-  )[
-    Optimizing neural networks, autoencoders, RNNs, NLP, GANs.
+#if true [
+  #let course(name, mark) = box[
+    #name~#text(size: .75em)[(#mark)]
   ]
-)
+
+  - *Software*: #(
+      course("Algorithms & Data Structures", "A+"),
+      course("Operating Systems", "A+"),
+      course("Compilers", "A+"),
+      course("Networks", "A-"),
+      course("Security", "A+"),
+    ).join(", ").
+  - *Hardware*: #(
+      course("Digital Systems", "A+"),
+      course("Computer Organization", "A+"),
+      course("Computer Architecture", "A-"),
+      course("Digital Electronics", "A+"),
+    ).join(", ").
+  - *Engineering*: #(
+      course("Machine Learning", "A"),
+      course("Signals & Systems", "A"),
+      course("Control Theory", "A-"),
+  ).join(", ").
+  - *Mathematics*: #(
+      course("Linear Algebra", "A+"),
+      course("Complex Analysis", "A+"),
+      course("Multivariate Calculus", "A"),
+      course("Probability", "A"),
+    ).join(", ").
+] else [
+  #grid(columns: 2, gutter: 1em,
+    course(
+      code: "ECE241",
+      name: "Digital Circuits",
+      mark: "A+",
+    )[
+      Digital logic circuit design with substantial hands-on laboratory work
+      using Verilog on FPGA boards.
+    ],
+    course(
+      code: "ECE334",
+      name: "Digital Electronics",
+      mark: "A+",
+    )[
+      Digital design techniques for integrated circuits, CMOS logic design,
+      Elmore delays.
+    ],
+    course(
+      code: "ECE243",
+      name: "Computer Organization",
+      mark: "A+",
+    )[
+      CPU design in Verilog and ARM instruction set architecture. Focus on
+      memory, caches, and scheduling IO with interrupts.
+    ],
+    course(
+      code: "ECE344",
+      name: "Operating Systems",
+      mark: "A+",
+    )[
+      Concurrency, deadlock, CPU scheduling, memory management, file systems.
+    ],
+    course(
+      code: "ECE345",
+      name: "Algorithms & Data Structures",
+      mark: "A+",
+    )[
+      Trees, graphs, amortized analysis, hashing, dynamic programming, greedy,
+      NPC.
+    ],
+    course(
+      code: "ECE244",
+      name: "Programming Fundamentals",
+      mark: "A+",
+    )[
+      Object-oriented programming in C++.
+    ],
+    course(
+      code: "APS360",
+      name: "Artificial Intelligence Fundamentals",
+      mark: "A+",
+    )[
+      Optimizing neural networks, autoencoders, RNNs, NLP, GANs.
+    ],
+  )
+]

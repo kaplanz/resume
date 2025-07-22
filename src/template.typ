@@ -1,5 +1,5 @@
 // Formats a media item with an icon prefix.
-#let media(icon: str, content) = {
+#let media(icon: "unknown", content) = {
   let item = it => box(height: 1em, align(horizon, it)) // inline alignment
   box(pad(x: .25em, {
     // Show the icon...
@@ -14,6 +14,11 @@
 // It takes your content and some metadata and formats it.
 // Go ahead and customize it to your liking!
 #let resume(author: (), social: (), body) = {
+  // Check if compile features are enabled
+  let enabled = key => (author, sys.inputs).all(
+    dict => dict.at(key, default: "").len() > 0
+  )
+
   // Set the document's basic properties
   set document(author: author.name, title: [#author.name's Resume])
   set page(
@@ -22,7 +27,7 @@
   )
   set text(font: "Libertinus Serif", lang: "en")
 
-  // Override commonly used style formats.
+  // Override commonly used style formats
   show link: underline
 
   show heading: it => {
@@ -50,16 +55,15 @@
   ]
 
   // Geography section
-  align(center)[
-    #media(icon: "building", author.affiliation)
-    #box(height: 1em, align(horizon, sym.dot.c))
-    #media(icon: "location", author.location)
-  ]
+  if enabled("details") {
+    align(center)[
+      #media(icon: "building", author.company)
+      #box(height: 1em, align(horizon, sym.dot.c))
+      #media(icon: "location", author.location)
+    ]
+  }
 
   // Contact information
-  let enabled = key => (author, sys.inputs).all(
-    dict => dict.at(key, default: "").len() > 0
-  )
   let contact = (
     if enabled("phone") {
       link(
@@ -83,35 +87,39 @@
 
   // Main body.
   set par(justify: true)
+  set block(spacing: .85em)
 
   body
 }
 
 // Defines an experience entry.
 #let experience(
-  what:  str,
-  where: str,
-  when:  (from: datetime, to: datetime),
-  fmt: "[month repr:short] [year]",
-  about,
+  what: str,
+  where: none,
+  when: (start: none, until: none),
+  dfmt: "[month repr:short] [year]",
+  hide: bool,
+  body,
 ) = {
-  // Header
-  block[
-    // Title
-    *#what* | #where
-    #h(1fr)
-    // Date
-    #emph[
-      #let from = when.from.display(fmt)
-      #if when.to != none {
-        let to = when.to.display(fmt)
-        if from != to [ #from -- #to ]
-        else [ #from ]
-      } else [ #from -- #emph[Present] ]
+  if hide != true {
+    // Header
+    block[
+      // Title
+      *#what* #if where != none [ | #where ]
+      #h(1fr)
+      // Date
+      #emph[
+        #let start = when.start.display(dfmt)
+        #if when.until != none {
+          let until = when.until.display(dfmt)
+          if start != until [ #start -- #until ]
+          else [ #start ]
+        } else [ #start -- #emph[Present] ]
+      ]
     ]
-  ]
-  // Body
-  about
+    // Content
+    body
+  }
 }
 
 // Defines a publication entry.
@@ -121,14 +129,27 @@
   conference:  str,
 ) = {
   list[
-    // Title
     #text(weight: "semibold")[#title]
     #h(1fr)
-    // Conference
     #emph(conference)
     #linebreak()
-    // Authors
-    #authors.
+    #emph(authors).
+  ]
+}
+
+// Defines a project entry.
+#let project(
+  name: str,
+  page: none,
+  date: none,
+  body,
+) = {
+  list[
+    #text(weight: "semibold")[#name]: #body
+    #h(1fr)
+    #if page != none {
+      box[#link(page, image(height: .8em, "img/media/link.svg"))]
+    }
   ]
 }
 
@@ -137,14 +158,14 @@
   code: str,
   name: str,
   mark: str,
-  info
+  body,
 ) = {
-  // Header
   block[
     #code: *#name*
     #h(1fr)
     #mark
   ]
-  // Body
-  info
+  block[
+    #body
+  ]
 }
