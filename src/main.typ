@@ -183,89 +183,31 @@
 
 = Relevant Courses
 
-#if true [
   #let course(name, mark) = box[
     #name~#text(size: .75em)[(#mark)]
   ]
 
-  - *Software*: #(
-      course("Algorithms & Data Structures", "A+"),
-      course("Operating Systems", "A+"),
-      course("Compilers", "A+"),
-      course("Networks", "A-"),
-      course("Security", "A+"),
-    ).join(", ").
-  - *Hardware*: #(
-      course("Digital Systems", "A+"),
-      course("Computer Organization", "A+"),
-      course("Computer Architecture", "A-"),
-      course("Digital Electronics", "A+"),
-    ).join(", ").
-  - *Engineering*: #(
-      course("Machine Learning", "A"),
-      course("Signals & Systems", "A"),
-      course("Control Theory", "A-"),
+- *Software*: #(
+    course("Algorithms & Data Structures", "A+"),
+    course("Operating Systems", "A+"),
+    course("Compilers", "A+"),
+    course("Networks", "A-"),
+    course("Security", "A+"),
   ).join(", ").
-  - *Mathematics*: #(
-      course("Linear Algebra", "A+"),
-      course("Complex Analysis", "A+"),
-      course("Multivariate Calculus", "A"),
-      course("Probability", "A"),
-    ).join(", ").
-] else [
-  #grid(columns: 2, gutter: 1em,
-    course(
-      code: "ECE241",
-      name: "Digital Circuits",
-      mark: "A+",
-    )[
-      Digital logic circuit design with substantial hands-on laboratory work
-      using Verilog on FPGA boards.
-    ],
-    course(
-      code: "ECE334",
-      name: "Digital Electronics",
-      mark: "A+",
-    )[
-      Digital design techniques for integrated circuits, CMOS logic design,
-      Elmore delays.
-    ],
-    course(
-      code: "ECE243",
-      name: "Computer Organization",
-      mark: "A+",
-    )[
-      CPU design in Verilog and ARM instruction set architecture. Focus on
-      memory, caches, and scheduling IO with interrupts.
-    ],
-    course(
-      code: "ECE344",
-      name: "Operating Systems",
-      mark: "A+",
-    )[
-      Concurrency, deadlock, CPU scheduling, memory management, file systems.
-    ],
-    course(
-      code: "ECE345",
-      name: "Algorithms & Data Structures",
-      mark: "A+",
-    )[
-      Trees, graphs, amortized analysis, hashing, dynamic programming, greedy,
-      NPC.
-    ],
-    course(
-      code: "ECE244",
-      name: "Programming Fundamentals",
-      mark: "A+",
-    )[
-      Object-oriented programming in C++.
-    ],
-    course(
-      code: "APS360",
-      name: "Artificial Intelligence Fundamentals",
-      mark: "A+",
-    )[
-      Optimizing neural networks, autoencoders, RNNs, NLP, GANs.
-    ],
-  )
-]
+- *Hardware*: #(
+    course("Digital Systems", "A+"),
+    course("Computer Organization", "A+"),
+    course("Computer Architecture", "A-"),
+    course("Digital Electronics", "A+"),
+  ).join(", ").
+- *Engineering*: #(
+    course("Machine Learning", "A"),
+    course("Signals & Systems", "A"),
+    course("Control Theory", "A-"),
+).join(", ").
+- *Mathematics*: #(
+    course("Linear Algebra", "A+"),
+    course("Complex Analysis", "A+"),
+    course("Multivariate Calculus", "A"),
+    course("Probability", "A"),
+  ).join(", ").
