@@ -211,3 +211,25 @@
     course("Multivariate Calculus", "A"),
     course("Probability", "A"),
   ).join(", ").
+
+= Selected Skills
+
+#grid(columns: (1fr, 1fr), gutter: 1em,
+  block[
+    *Languages*: #(
+      "Rust",
+      "Python",
+      "C",
+      "C++",
+      "Assembly",
+      "Verilog",
+    ).join(", ").
+  ],
+  block[
+    *Toolchain*: #(
+      "macOS/Linux",
+      "SSH",
+      "CLI",
+    ).join(", ").
+  ],
+)
